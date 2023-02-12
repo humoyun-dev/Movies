@@ -9,10 +9,10 @@ const MoviesAddForm = ({ addForm }) => {
   };
 
   const addFormHandler = (e) => {
-    if (state.name === "" || state.value === "") {
-      return;
-    }
     e.preventDefault();
+    if (state.name === "" || state.value === "") {
+      alert("Complete all gap");
+    }
     const data = { name: state.name, views: state.views };
     addForm(data);
     setState({ name: "", views: "" });
